@@ -8,6 +8,12 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.22.0'
+      - name: حفظ main.dart الأصلي
+        run: cp lib/main.dart /tmp/main_backup.dart
+      - name: إصلاح ملفات الأندرويد الناقصة
+        run: flutter create . --platforms android --org com.ottoman.game --project-name ottoman_empire_1800
+      - name: إرجاع لعبتك
+        run: cp /tmp/main_backup.dart lib/main.dart
       - run: flutter pub get
       - run: flutter build apk --release
       - uses: actions/upload-artifact@v4
