@@ -1,0 +1,13 @@
+name: ottoman_empire_1800
+description: لعبة محاكاة الدولة العثمانية 1800 - الصدر الأعظم
+publish_to: 'none'
+version: 1.0.0+1
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.2.0
+  shared_preferences: ^2.2.2
+flutter:
+  uses-material-design: true
